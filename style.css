@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    position: relative;
+    width: 100%;
+}
+.container {
+    padding: 5px;
+    position: relative;
+}
+.container .fixed___Navbar {
+    width: 100%;
+    position: sticky;
+    /* position: relative; */
+    top: 0;
+    z-index: 123;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.navbar {
+    width: 90%;
+    height: 100%;
+    border-radius: 25px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to top, rgba(0, 128, 128, 0.85), rgba(0, 0, 22, 0.85));
+}
+.navbar img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+.brand a {
+    color: azure;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#sertificate {
+    border: 1.4px solid lime;
+    border-radius: 35px;
+    /* background: green; */
+}
+.navigation {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.navigation a {
+    color: azure;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+.header h1 {
+    text-align: center;
+}
+.header .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.buttons button {
+    position: relative;
+    cursor: pointer;
+    border: 2px solid lime;
+    display: flex;
+    align-items: center;
+    border-radius: 35px;
+    justify-content: center;
+    transition: 0.9s;
+}
+.buttons button:first-child {
+    background: green;
+}
+.buttons button:hover{
+    background: lime;
+    padding: 0;
+    color: gold;
+    transform: rotate(720deg);
+    box-shadow: 0 0 20px 2px lime;
+}
+button span {
+    z-index: 4;
+}
+.buttons button:after {
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    background: forestgreen;
+    border: 3px dotted lime;
+    border-radius: 50%;
+    z-index: 3;
+    opacity: 0;
+    transition: 1s;
+}
+.buttons button:hover:after {
+    opacity: 1;
+}
+
+
+.section {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    background: linear-gradient(to top, rgba(0, 128, 128, 0.85), rgba(0, 0, 22, 0.85));
+    color: azure;
+    border-radius: 15px;
+}
+.section .box {
+    display: grid;
+    gap: 15px;
+    position: relative;
+}
+.section .box div {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.oneBtn {
+    position: relative;
+    border-radius: 35px;
+    cursor: pointer;
+    border: 2px solid lime;
+    font-size: 28px;
+    z-index: 1;
+    display: flex;
+    background: #000016;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.9s;
+}
+.oneBtn a {
+    z-index: 33;
+    color: azure;
+    text-decoration: none;
+}
+.oneBtn::after {
+    content: "";
+    position: absolute;
+    /* width: 600px;
+    height: 200px; */
+    inset: 5px;
+    border-radius: 35px;
+    z-index: 5;
+    background: teal;
+
+}
+.oneBtn::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    height: 50px;
+    background: yellow;
+    animation: animate 2s linear infinite;
+
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.oneBtn:hover {
+    color: gold;
+    
+}
+.context p {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    animation: animate5 25s linear infinite;
+}
+.footer .contact {
+    position: relative;
+}
+.footer .contact form {
+    border: 15px;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 55;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+form h2 {
+    text-align: center;
+    color: teal;
+}
+form input, textarea, .send {
+    color: azure;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to top, teal, #000016);
+}
+textarea {
+    resize: none;
+}
+
+
+.footer span {
+    position: absolute;
+    border-radius: 50%;
+    animation: star 2s linear infinite;
+}
+.endFooter p {
+    text-align: center;
+    background: linear-gradient(to top, #000016, teal);
+    font-size: 16px;
+    color: azure;
+}
+@keyframes star {
+    0% {
+        background: transparent;
+        box-shadow: none;
+    }
+    50% {
+        background: azure;
+        box-shadow: 0 0 15px 1px azure;
+    }
+    100% {
+        background: transparent;
+        box-shadow: none;
+    }
+}
+@keyframes animate5 {
+    0% {
+        background: white;
+    }
+    25% {
+        background: white;
+    }
+    35% {
+        background: #000016;
+    }
+    80% {
+        background: #000016;
+    }
+    90% {
+        background: white;
+    }
+}
